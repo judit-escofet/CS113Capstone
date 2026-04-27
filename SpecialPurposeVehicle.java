@@ -12,8 +12,8 @@ public abstract class SpecialPurposeVehicle extends Vehicle {
         return purpose;
     }
 
-    public String toString() {
-        return super.toString() + " Purpose: " + purpose + " Requires Special License: " + requiresSpecialLicense;
+    public String vehicleDetails() {
+        return "Special Purpose Vehicle - " + super.vehicleDetails() + ", Purpose: " + purpose + ", Requires Special License: " + requiresSpecialLicense;
     }
     
 }

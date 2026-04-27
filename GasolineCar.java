@@ -31,5 +31,9 @@ public class GasolineCar extends Car {
         }
         return basePrice;
     }
+
+    public String vehicleDetails() {
+        return "Gasoline Car - " + super.vehicleDetails() + ", Fuel Efficiency: " + fuelEfficiency + " MPG, Fuel Tank Capacity: " + fuelTankCapacity + " gallons, Current Fuel Level: " + currentFuelLevel + " gallons";
+    }
     
 }

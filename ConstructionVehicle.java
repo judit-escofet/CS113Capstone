@@ -10,8 +10,8 @@ public class ConstructionVehicle extends SpecialPurposeVehicle {
         return operatingWeight;
     }
 
-    public String toString() {
-        return super.toString() + " Operating Weight: " + operatingWeight;
+    public String vehicleDetails() {
+        return "Construction Vehicle - " + super.vehicleDetails() + ", Operating Weight: " + operatingWeight + " tons";
     }
     
     public double calculateRentalPrice(int days) {

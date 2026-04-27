@@ -10,8 +10,8 @@ public class Excavator extends ConstructionVehicle {
         return bucketCapacity;
     }
 
-    public String toString() {
-        return super.toString() + " Bucket Capacity: " + bucketCapacity;
+    public String vehicleDetails() {
+        return "Excavator - " + super.vehicleDetails() + ", Bucket Capacity: " + bucketCapacity + " cubic yards";
     }
 
     public double calculateRentalPrice(int days) {

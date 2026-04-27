@@ -16,8 +16,8 @@ public abstract class CommercialVehicle extends Vehicle {
         return companyOwned;
     }
 
-    public String toString() {
-        return super.toString() + " Load Capacity: " + loadCapacity + " tons";
+    public String vehicleDetails() {
+        return super.vehicleDetails() + " Load Capacity: " + loadCapacity + " tons";
     }
     
 }

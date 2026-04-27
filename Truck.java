@@ -17,5 +17,9 @@ public class Truck extends CommercialVehicle {
         return basePrice;
     }
 
+    public String vehicleDetails() {
+        return "Truck - " + super.vehicleDetails();
+    }
+
     
 }

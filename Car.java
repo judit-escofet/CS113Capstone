@@ -17,8 +17,9 @@ public class Car extends PersonalVehicle {
         }
         return basePrice;
     }
+    
 
-    public String toString() {
-        return super.toString() + " Number of Doors: " + numberOfDoors;
+    public String vehicleDetails() {
+        return "Car - " + super.vehicleDetails() + ", Number of Doors: " + numberOfDoors;
     }
 }

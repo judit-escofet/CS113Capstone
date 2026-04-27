@@ -12,6 +12,7 @@ public class Motorcycle extends PersonalVehicle {
         return hasHelmetIncluded;
     }
 
+
     public int getEngineSize() {
         return engineSize;
     }
@@ -25,5 +26,9 @@ public class Motorcycle extends PersonalVehicle {
             basePrice *= 1.20; 
         }
         return basePrice;
+    }
+
+    public String vehicleDetails() {
+        return "Motorcycle - " + super.vehicleDetails() + ", Helmet Included: " + (hasHelmetIncluded ? "Yes" : "No") + ", Engine Size: " + engineSize + " cc";
     }
 }

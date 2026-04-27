@@ -3,6 +3,10 @@ public class LightTruck extends Truck {
         super(manufacturer, model, year, vehicleID, isAvailable, dailyRate, loadCapacity, companyOwned);
     }
 
+    public String vehicleDetails() {
+        return "Light Truck - " + super.vehicleDetails();
+    }
+
     public double calculateRentalPrice(int days) {
         double basePrice = super.calculateRentalPrice(days);
         if (loadCapacity > 50) {

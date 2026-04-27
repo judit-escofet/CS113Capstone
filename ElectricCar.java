@@ -26,5 +26,9 @@ public class ElectricCar extends Car {
         basePrice *= (1 - ecoDiscount);
         return basePrice;
     }
+
+    public String vehicleDetails() {
+        return "Electric Car - " + super.vehicleDetails() + ", Battery Range: " + batteryRange + " miles, Current Charge: " + currentCharge + "%";
+    }
     
 }

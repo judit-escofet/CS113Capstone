@@ -37,8 +37,15 @@ public abstract class Vehicle {
         return isAvailable;
     }
 
-    public String toString() {
-        return  "Year: " + year + " Manufacturer: " + manufacturer + " Model: " + model + " (Vehicle ID: " + vehicleID + ")" + "Daily Rate: $" + dailyRate   + " Available: " + (isAvailable ? "Yes" : "No") ;
+   
+    public String vehicleDetails() 
+    {
+        return "Vehicle ID: " + vehicleID + ", Manufacturer: " + manufacturer + ", Model: " + model + ", Year: " + year + ", Available: " + isAvailable + ", Daily Rate: $" + dailyRate;
+    }
+    
+    public String toString() 
+    {
+        return "-------------------------------\n"+ vehicleDetails()  +"\n-------------------------------";
     }
 
     public abstract double calculateRentalPrice(int days);

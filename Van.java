@@ -20,4 +20,8 @@ public class Van extends CommercialVehicle {
         return basePrice;
     }  
 
+    public String vehicleDetails() {
+        return "Van - " + super.vehicleDetails() + ", Passenger Van: " + (isPassengerVan ? "Yes" : "No");
+    }
+
 }
