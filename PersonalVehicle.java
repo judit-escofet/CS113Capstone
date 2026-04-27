@@ -14,7 +14,4 @@ public abstract class PersonalVehicle extends Vehicle {
     public String vehicleDetails() {
         return "Personal Vehicle - " + super.vehicleDetails() + ", Seating Capacity: " + seatingCapacity;
     }
-
-
-
 }

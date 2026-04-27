@@ -1,4 +1,4 @@
-public abstract class Vehicle {
+public abstract class Vehicle implements Comparable{
     protected String manufacturer ;
     protected String model;
     protected int year;
@@ -48,6 +48,19 @@ public abstract class Vehicle {
         return "-------------------------------\n"+ vehicleDetails()  +"\n-------------------------------";
     }
 
+    //recursion (we take off 5% for each additional day after the first)
+    public double accumulativeDiscount(int days) {
+        if(days == 1){
+            return 0;
+        } else {
+            return 0.05 + accumulativeDiscount(days - 1);
+        }
+    } 
+
     public abstract double calculateRentalPrice(int days);
 
+    public int compareTo(Object other) {
+        return ((Integer)(this.vehicleID)).compareTo(((Integer) ((Vehicle) other).getVehicleID()));
+       
+    }
 }
