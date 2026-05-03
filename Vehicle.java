@@ -61,6 +61,13 @@ public abstract class Vehicle implements Comparable{
 
     public int compareTo(Object other) {
         return ((Integer)(this.vehicleID)).compareTo(((Integer) ((Vehicle) other).getVehicleID()));
-       
+    }
+
+    public boolean equals(Object other) {
+        if (this == other)
+            return true;
+        else if (this.vehicleID == ((Vehicle) other).vehicleID)
+            return true;
+        return false;
     }
 }
