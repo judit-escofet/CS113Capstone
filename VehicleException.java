@@ -4,6 +4,7 @@ public class VehicleException extends Exception {
         super(message);
     }
 
+    // Factory methods — each covers one required case
 
     public static VehicleException unavailable(int vehicleID) {
         return new VehicleException("Vehicle " + vehicleID + " is not available for rental.");
