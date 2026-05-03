@@ -93,4 +93,10 @@ public class RentalManager {
 
         System.out.println("Vehicles sorted by daily rates.");
     }
+
+    public Vehicle searchByID(int vehicleID, int index) {
+    if (index >= count) return null;
+    if (fleet[index].getVehicleID() == vehicleID) return fleet[index];
+    return searchByID(vehicleID, index + 1);
+}
 }

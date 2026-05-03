@@ -1,4 +1,5 @@
-package CS113Capstone;
+
+import java.util.InputMismatchException;
 import java.util.Scanner; 
 
 public class Main {
@@ -7,10 +8,15 @@ public class Main {
         Garage garage = new Garage();
         RentalManager manager = new RentalManager();
 
-        for (Vehicle v: garage.vehicles){
-            manager.addVehicle(v);
+        for (Vehicle v : garage.vehicles) {
+            if (v != null) {
+                try {
+                    manager.addVehicle(v);
+                } catch (VehicleException e) {
+                    System.out.println("Error adding vehicle: " + e.getMessage());
+                }
+            }
         }
-
         Scanner scanner = new Scanner(System.in);
 
         int choice = 0;
@@ -38,13 +44,18 @@ public class Main {
                         manager.returnVehicle(returnID);
                         break;
                     case 4:
-                        System.out.print("Enter vehicle ID for details: ");
+                        System.out.print("Enter vehicle ID to search: ");
                         int detailsID = scanner.nextInt();
-                        manager.displayVehicleDetails(detailsID);
+                        Vehicle result = manager.searchByID(detailsID, 0);
+                        if (result != null) {
+                            System.out.println(result);
+                        } else {
+                            System.out.println("No vehicle found with ID " + detailsID + ".");
+                        }
                         break;
                     case 5:
-                        manager.sortByRentalPrice();
-                        System.out.println("Vehicles sorted by rental price.");
+                        manager.sortByDailyRate();
+                        manager.displayFleet();
                         break;
                     case 6:
                         System.out.println("Exiting...");
