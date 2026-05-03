@@ -17,7 +17,7 @@ public class ConstructionVehicle extends SpecialPurposeVehicle {
     public double calculateRentalPrice(int days) {
         double baseCost = days * dailyRate;
         double weightSurcharge = operatingWeight * 0.05 * days; 
-        return baseCost + weightSurcharge;
+        return baseCost + weightSurcharge- ((baseCost + weightSurcharge) * accumulativeDiscount(days));
     }
     
 }

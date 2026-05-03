@@ -25,7 +25,7 @@ public class Motorcycle extends PersonalVehicle {
         if (engineSize > 1000) {
             basePrice *= 1.20; 
         }
-        return basePrice;
+        return basePrice - (basePrice * accumulativeDiscount(days));
     }
 
     public String vehicleDetails() {

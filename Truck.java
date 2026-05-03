@@ -14,7 +14,7 @@ public class Truck extends CommercialVehicle {
         if(days > 7) {
             basePrice *= 0.9; 
         }
-        return basePrice;
+        return basePrice- (basePrice * accumulativeDiscount(days));
     }
 
     public String vehicleDetails() {

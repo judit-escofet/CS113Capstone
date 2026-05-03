@@ -15,7 +15,7 @@ public class Car extends PersonalVehicle {
         if (seatingCapacity > 5) {
             basePrice += 20; 
         }
-        return basePrice;
+        return basePrice - (basePrice * accumulativeDiscount(days));
     }
     
 
