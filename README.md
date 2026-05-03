@@ -1,2 +1,2 @@
 # CS113Capstone
-Group Integrants: Garima Thapa, Nintsi something, Aleks Kravasomething, and Judit Escofet Sànchez 
+Group Integrants: Garima Thapa, Nintsi Chkhaidze, Aleks Krasteva, and Judit Escofet Sànchez 
