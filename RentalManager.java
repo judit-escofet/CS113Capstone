@@ -12,7 +12,6 @@ public class RentalManager {
         count = 0;
     }
 
-    
     public void addVehicle(Vehicle v) throws VehicleException {
         if (count >= MAX_VEHICLES) {
             throw VehicleException.fleetFull(MAX_VEHICLES);
