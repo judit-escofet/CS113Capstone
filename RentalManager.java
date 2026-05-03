@@ -54,7 +54,6 @@ public class RentalManager {
             System.out.println(fleet[i]);
         }
     }
-
     
     public void interactiveRent() {
         Scanner scanner = new Scanner(System.in);
@@ -73,5 +72,26 @@ public class RentalManager {
         } catch (VehicleException e) {
             System.out.println("Rental error: " + e.getMessage());
         }
+    }
+
+    public void sortByDailyRate(){
+        for (int i = 0; i < count - 1; i++){
+            int minIndex = i;
+
+            for (int j = i + 1; j < count; j++){
+                Comparable a = (Comparable) fleet[j];
+                Comparable b = (Comparable) fleet[minIndex];
+
+                if (a.compareTo(b) < 0){
+                    minIndex = j;
+                }
+            }
+
+            Vehicle t = fleet[minIndex];
+            fleet[minIndex] = fleet[i];
+            fleet[i] = t;
+        }
+
+        System.out.println("Vehicles sorted by daily rates.");
     }
 }
