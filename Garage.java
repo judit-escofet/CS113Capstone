@@ -12,6 +12,7 @@ public class Garage
         vehicles[5] = new Motorcycle("Yamaha", "YZF-R3", 2021, Vehicle.nextVehicleID, true, 35.0, 2, false, 321);
         vehicles[6] = new LightTruck("Chevrolet", "Silverado", 2021, Vehicle.nextVehicleID, true, 85.0, 120, false);
         vehicles[7] = new HeavyTruck("MAN", "TGX", 2020, Vehicle.nextVehicleID, true, 160.0, 350, true);
-        vehicles[8] = new GasolineCar("BMW","4 series", 2023, Vehicle.nextVehicleID, true, 80, 4, 4, 2);
+        vehicles[8] = new GasolineCar("BMW", "4 Series", 2023, Vehicle.nextVehicleID, true, 80.0, 4, 4, 28, 15, 12);
+        vehicles[9] = new Van("Mercedes", "Sprinter", 2022, Vehicle.nextVehicleID, true, 95.0, 3.0, false, true);
     }
 }

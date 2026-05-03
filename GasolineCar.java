@@ -3,11 +3,13 @@ public class GasolineCar extends Car {
     private int fuelTankCapacity;
     private double currentFuelLevel;
 
-    public GasolineCar(String manufacturer, String model, int year, int vehicleID, boolean isAvailable, double dailyRate, int seatingCapacity, int numberOfDoors, double fuelEfficiency) {
-        super(manufacturer, model, year, vehicleID, isAvailable, dailyRate, seatingCapacity, numberOfDoors);
+    public GasolineCar(String manufacturer, String model, int year, int vehicleID, boolean isAvailable, double dailyRate, int seatingCapacity, int numberOfDoors, double fuelEfficiency, int fuelTankCapacity, double currentFuelLevel) {
+    super(manufacturer, model, year, vehicleID, isAvailable, dailyRate, seatingCapacity, numberOfDoors);
         this.fuelEfficiency = fuelEfficiency;
-        if (currentFuelLevel/fuelTankCapacity < 0.2) {
-            this.isAvailable = false; 
+        this.fuelTankCapacity = fuelTankCapacity;
+        this.currentFuelLevel = currentFuelLevel;
+        if (fuelTankCapacity > 0 && currentFuelLevel / fuelTankCapacity < 0.2) {
+            this.isAvailable = false;
         }
     }
 

@@ -18,7 +18,6 @@ public class RentalManager {
         }
         fleet[count++] = v;
     }
-
     
     public double rentVehicle(int vehicleID, int days) throws VehicleException {
         if (days < 1) {
