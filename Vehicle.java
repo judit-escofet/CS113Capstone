@@ -60,9 +60,8 @@ public abstract class Vehicle implements Comparable{
     public abstract double calculateRentalPrice(int days);
 
     public int compareTo(Object other) {
-        return ((Integer)(this.vehicleID)).compareTo(((Integer) ((Vehicle) other).getVehicleID()));
+        return ((Double)(this.dailyRate)).compareTo(((Double) ((Vehicle) other).dailyRate()));
     }
-
     public boolean equals(Object other) {
         if (this == other)
             return true;
